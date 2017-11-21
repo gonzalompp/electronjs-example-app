@@ -1,0 +1,23 @@
+<html>
+<script>
+
+/* DISABLE THE ZOOM */
+var webFrame = require('electron').webFrame;
+webFrame.setZoomLevel(0);
+webFrame.setVisualZoomLevelLimits(1, 1);
+webFrame.setLayoutZoomLevelLimits(0, 0);
+
+</script>
+<style>
+/* REMOVES SELECTION */
+html {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select:none;
+  user-select:none;
+  -o-user-select:none;
+}
+</style>
+<h1>Example Kiosk</h1>
+<button onclick="window.close();">Close Window</button>
+</html>
